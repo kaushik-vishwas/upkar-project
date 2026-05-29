@@ -204,7 +204,7 @@ const InvestmentModal = ({ isOpen, onClose }) => {
 
     try {
       const res = await fetch(
-        'http://localhost:5000/api/send-investment-email',
+        // 'http://localhost:5000/api/send-investment-email',
         // 'https://upkar-backend.onrender.com/api/send-investment-email',
         'https://upkar.delicod.com/api/send-investment-email',
         {
