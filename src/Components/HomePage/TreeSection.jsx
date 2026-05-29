@@ -58,7 +58,7 @@ export default function Section() {
         </h2>
 
         <h2
-          className="text-2xl sm:text-4xl md:text-5xl font-figtree lg:text-[64px] text-black font-semibold"
+          className="text-2xl sm:text-4xl md:text-5xl font-figtree lg:text-[64px] text-[#2D5C3A]  font-semibold"
           style={{
             // fontFamily: "'Noto Serif JP', serif",
             opacity: animate ? 1 : 0,
