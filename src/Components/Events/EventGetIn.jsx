@@ -104,10 +104,20 @@ const EventGetIn = () => {
 
   return (
     <div className="w-full px-4 lg:px-10 py-10 font-figtree">
-      <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-12">
+      {/* <h2 className="text-4xl md:text-4xl lg:text-4xl mb-8 md:mb-12">
         <span className="font-normal">Get in</span>
         <span className="font-semibold text-[#2D5C3A]"> Touch</span>
-      </h2>
+      </h2> */}
+      <div className="flex items-center gap-4 mb-8 md:mb-12">
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+        <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl whitespace-nowrap">
+          <span className="font-normal">Get in</span>
+          <span className="font-semibold text-[#2D5C3A]"> Touch</span>
+        </h2>
+
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+      </div>
 
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

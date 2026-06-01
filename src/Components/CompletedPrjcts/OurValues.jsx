@@ -78,7 +78,7 @@ const OurValues = () => {
         </h2> */}
         <div className="flex items-center gap-4 mb-16">
           <div className="flex-1 h-[2px] bg-gray-300"></div>
-          <h2 className="text-4xl md:text-5xl font-figtree text-center whitespace-nowrap">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-figtree text-center whitespace-nowrap">
             <span className="font-normal">Our</span>{' '}
             <span className="font-semibold text-[#2D5C3A]">Values</span>
           </h2>

@@ -20,7 +20,7 @@ const Locations = () => {
     projectStatus: '',
     projectId: '',
     projectName: '',
-    location: '',
+    // location: '',
     name: '',
     email: '',
     phone: '',
@@ -45,10 +45,28 @@ const Locations = () => {
     }
   };
 
+  // const fetchProjects = async () => {
+  //   try {
+  //     const allProjects = await getAllProjects();
+  //     if (Array.isArray(allProjects)) setProjects(allProjects);
+  //   } catch (error) {
+  //     console.error('Error fetching projects:', error);
+  //     toast.error('Failed to fetch projects!');
+  //   }
+  // };
+
   const fetchProjects = async () => {
     try {
       const allProjects = await getAllProjects();
-      if (Array.isArray(allProjects)) setProjects(allProjects);
+
+      if (Array.isArray(allProjects)) {
+        //  remove hidden projects
+        const visibleProjects = allProjects.filter(
+          (p) => p.isVisible !== false,
+        );
+
+        setProjects(visibleProjects);
+      }
     } catch (error) {
       console.error('Error fetching projects:', error);
       toast.error('Failed to fetch projects!');
@@ -94,7 +112,7 @@ const Locations = () => {
     const {
       projectStatus,
       projectId,
-      location,
+      // location,
       name,
       email,
       phone,
@@ -104,7 +122,7 @@ const Locations = () => {
 
     if (!projectStatus) return 'Please select project status.';
     if (!projectId) return 'Please select project.';
-    if (!location.trim()) return 'Location is required.';
+    // if (!location.trim()) return 'Location is required.';
     if (!name.trim()) return 'Full name is required.';
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -147,7 +165,7 @@ const Locations = () => {
         projectStatus: '',
         projectId: '',
         projectName: '',
-        location: '',
+        // location: '',
         name: '',
         email: '',
         phone: '',
@@ -172,7 +190,7 @@ const Locations = () => {
       <div className="flex items-center justify-center mb-12">
         <div className="hidden lg:block flex-1 h-[1px] bg-gray-300 mr-6"></div>
 
-        <h2 className="text-3xl md:text-4xl font-figtree text-center whitespace-nowrap">
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-figtree text-center whitespace-nowrap">
           <span className="font-normal">Project</span>{' '}
           <span className="font-semibold text-[#2D5C3A]">Enquiries</span>
         </h2>
@@ -295,7 +313,7 @@ const Locations = () => {
                 className="border border-black rounded-[20px] px-4 py-2 w-full"
                 required
               />
-              <input
+              {/* <input
                 type="text"
                 name="location"
                 placeholder="Location*"
@@ -303,7 +321,7 @@ const Locations = () => {
                 onChange={handleChange}
                 className="border border-black rounded-[20px] px-4 py-2 w-full"
                 required
-              />
+              /> */}
 
               <textarea
                 name="query"

@@ -64,15 +64,17 @@ const ReadMore = () => {
         {/* Section Heading */}
 
         <div className="flex items-center justify-center mb-12">
-          <div className="hidden lg:block flex-1 h-[1px] bg-gray-300 mr-6"></div>
+          {/* LEFT LINE */}
+          <div className="flex-1 h-[1px] bg-gray-300 mr-3 sm:mr-6"></div>
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#2D5C3A] font-figtree text-center whitespace-nowrap">
+          {/* TITLE */}
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold text-[#2D5C3A] font-figtree text-center whitespace-nowrap">
             Blogs
           </h2>
 
-          <div className="hidden lg:block flex-1 h-[1px] bg-gray-300 ml-6"></div>
+          {/* RIGHT LINE */}
+          <div className="flex-1 h-[1px] bg-gray-300 ml-3 sm:ml-6"></div>
         </div>
-
         <div className="space-y-12">
           {articles.map((article) => {
             const { day, month, year } = formatDate(article.createdAt);
