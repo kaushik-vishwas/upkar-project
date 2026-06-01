@@ -1926,7 +1926,7 @@ export const updateTestimonialAPI = async (id, formData, token) => {
 export const deleteTestimonialAPI = async (id, token) => {
   try {
     const { data } = await axios.delete(
-      `${API_URL}/homepage  /delete-testimonial/${id}`,
+      `${API_URL}/homepage/delete-testimonial/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
