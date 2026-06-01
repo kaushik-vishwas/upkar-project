@@ -17,10 +17,10 @@ const TermsConditions = () => {
               1. Acceptance of Terms
             </h2>
             <p>
-              By accessing and using our website{' '}
-              <span className="font-semibold text-[#2D5C3A]">
+              By accessing and using our website
+              {/* <span className="font-semibold text-[#2D5C3A]">
                 upkar-frontend.vercel.app
-              </span>
+              </span> */}
               , you accept and agree to be bound by these Terms & Conditions.
             </p>
           </div>

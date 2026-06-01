@@ -47,24 +47,19 @@ const Footer = forwardRef((props, ref) => {
   return (
     <footer
       ref={ref}
-      className="w-full bg-[#2D5C3A] text-white py-14 font-[Figtree]"
+      className="w-full bg-[#2D5C3A] text-white py-10 font-[Figtree]"
     >
       <div className="max-w-7xl mx-auto px-4 ">
         <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] gap-y-10 gap-x-3 md:gap-x-4">
           {/* Logo */}
           <div className="col-span-2 md:col-span-1">
-            {/* <img
-              src={Footerimg}
-              alt="Upkar Logo"
-              className="mb-4 max-w-[180px]"
-            /> */}
             <img
               src={Footerimg}
               alt="Upkar Logo"
               className="mb-4 h-32 w-auto object-contain -ml-1"
             />
             <p className="text-xl md:text-xl lg:text-2xl font-bold max-w-[200px]">
-              Shaping a 50+ years legacy of quality & trust
+              Shaping a 52+ years legacy of quality & trust
             </p>
           </div>
 
@@ -187,20 +182,15 @@ const Footer = forwardRef((props, ref) => {
         </div>
 
         {/* Creda */}
-        <div className="flex justify-end mt-8 mb-6">
+        <div className="flex justify-end -mt-10 mb-6">
           <img src={Footerimg2} alt="Creda Logo" className="w-[120px]" />
         </div>
 
-        <div className="border-t border-gray-700 my-10"></div>
+        {/* <div className="border-t border-gray-700 my-2"></div> */}
 
         <div className="flex flex-col items-center gap-4">
           <img src={Footerimg1} alt="Footer" className="w-full max-w-[60%]" />
-          {/* <p className="text-center text-sm">
-            © Upkar Group. All Rights Reserved | Design and Developed by{' '}
-            <a href="https://seekneo.com/" target="_blank" rel="noreferrer">
-              Seekneo
-            </a>
-          </p> */}
+
           <p className="text-center text-sm">
             Copyright © 2026, All rights reserved with{' '}
             <span className="font-semibold">Upkar Group.</span>

@@ -14,13 +14,13 @@ const PrivacyPolicy = () => {
           <div>
             <h2 className="text-xl font-semibold mb-2">1. Introduction</h2>
             <p>
-              Upkar Groups ("we", "our", "us") is committed to protecting the
+              Upkar Group ("we", "our", "us") is committed to protecting the
               privacy of our users. This Privacy Policy outlines how we collect,
               use, disclose, and safeguard your information when you visit our
               website{' '}
-              <span className="font-semibold text-[#2D5C3A]">
+              {/* <span className="font-semibold text-[#2D5C3A]">
                 upkar-frontend.vercel.app
-              </span>{' '}
+              </span>{' '} */}
               or engage with our services, including but not limited to RCS
               messaging, WhatsApp Business communications, and other digital
               campaigns.

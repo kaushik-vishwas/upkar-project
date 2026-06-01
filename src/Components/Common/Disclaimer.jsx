@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function DisclaimerModal({ onAgree }) {
+  useEffect(() => {
+    // Disable background scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      // Restore scrolling when modal closes
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <div className="fixed inset-0 z-[9999] font-figtree flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
       <div className="bg-white w-full max-w-2xl rounded-lg shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="px-8 pt-8 pb-4">
+        <div className="px-8 pt-8 pb-4 text-center">
           <h2 className="text-2xl font-bold text-gray-900 tracking-wide uppercase">
             Disclaimer
           </h2>
         </div>
 
         {/* Scrollable Body */}
-        <div className="px-8 pb-6 max-h-[60vh] text-justify  overflow-y-auto text-gray-700 text-sm  space-y-4 border border-green-800 mx-6 rounded p-4">
+        <div className="px-8 pb-6 max-h-[60vh] overflow-y-auto scrollbar-hide text-justify text-gray-700 text-sm space-y-4 border border-green-800 mx-6 rounded p-4">
           <p>
             The content of this website is for general information purposes
             only. While enough care is taken by Upkar Developers to ensure that
@@ -33,22 +43,25 @@ export default function DisclaimerModal({ onAgree }) {
             imagination, the information on the website shall be construed as an
             advertisement and/or invitation or offer for sale.
           </p>
+
           <p>
             To find out more about projects/developments, please call
             (8880796796) or visit our sales office during working hours and get
             in touch with authorized Upkar Developers sales representative.
           </p>
+
           <p>
             Upkar Developers is a member of Confederation of the Real Estate
             Developers Associations of India - Bengaluru.
           </p>
+
           <p className="font-bold text-gray-900">
             All payments to be made through cheques, DD, NEFT, RTGS favouring
             the concerned company against official receipts.
           </p>
         </div>
 
-        {/* Footer / Agree Button */}
+        {/* Footer */}
         <div className="flex justify-center py-5 border-t border-gray-100">
           <button
             onClick={onAgree}
