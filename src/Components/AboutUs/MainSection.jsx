@@ -155,7 +155,7 @@ const MainSection = () => {
         </div>
 
         <div className="relative">
-          <div className="rounded-[2rem] overflow-hidden relative h-[280px] sm:h-[350px] md:h-[450px] lg:h-[560px]">
+          <div className="rounded-[2rem] overflow-hidden relative h-[250px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
             {images.map((img, index) => (
               <div
                 key={index}
@@ -176,8 +176,20 @@ const MainSection = () => {
         </div>
       </div>
 
+      {/* Who We Are Heading */}
+      <div className="flex items-center gap-4 mb-1 mt-14">
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+        <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-figtree text-center whitespace-nowrap">
+          <span className="font-normal">Who </span>
+          <span className="font-semibold text-[#2D5C3A]">We Are</span>
+        </h2>
+
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+      </div>
+
       {/* Paragraph Section */}
-      <div className="pt-8 sm:pt-10 max-w-[90%] mx-auto">
+      <div className="pt-2  max-w-[90%] mx-auto">
         <p className="mb-4 text-sm sm:text-base md:text-lg leading-relaxed text-justify sm:text-center">
           {data.paragraph1}
         </p>

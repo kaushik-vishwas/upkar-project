@@ -53,10 +53,15 @@ const Team = () => {
         transition: 'all 0.9s cubic-bezier(0.23, 1, 0.32, 1)',
       }}
     >
-      <div className="mb-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-[48px] ">
-          Our <span className="font-semibold text-[#2D5C3A]">Team</span>
+      <div className="flex items-center gap-4 mb-8 mt-12">
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+        <h2 className="text-3xl sm:text-3xl lg:text-4xl whitespace-nowrap">
+          <span className="font-normal">Our </span>
+          <span className="font-semibold text-[#2D5C3A]">Team</span>
         </h2>
+
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
       </div>
 
       {/* MOBILE SLIDER */}
@@ -73,7 +78,7 @@ const Team = () => {
                   : 'border-gray-300'
               }`}
             >
-              <div className="w-full h-80 bg-gray-200">
+              <div className="w-full h-64 bg-gray-200">
                 <img
                   src={teamMembers[currentIndex]?.memberImage}
                   alt={teamMembers[currentIndex]?.memberName}
@@ -113,7 +118,7 @@ const Team = () => {
       </div>
 
       {/* DESKTOP GRID */}
-      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-5 gap-6">
         {teamMembers.map((member, index) => (
           <div
             key={index}
@@ -129,7 +134,7 @@ const Team = () => {
               e.currentTarget.style.border = '2px solid transparent';
             }}
           >
-            <div className="w-full h-96 bg-gray-200">
+            <div className="w-full h-56 bg-gray-200">
               <img
                 src={member.memberImage}
                 alt={member.memberName}

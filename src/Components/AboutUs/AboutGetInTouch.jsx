@@ -21,10 +21,28 @@ const GetInTouch = () => {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
+    // const fetchProjects = async () => {
+    //   try {
+    //     const allProjects = await getAllProjects();
+    //     if (Array.isArray(allProjects)) setProjects(allProjects);
+    //   } catch (error) {
+    //     console.error('Error fetching projects:', error);
+    //     toast.error('Failed to fetch projects!');
+    //   }
+    // };
+
     const fetchProjects = async () => {
       try {
         const allProjects = await getAllProjects();
-        if (Array.isArray(allProjects)) setProjects(allProjects);
+
+        if (Array.isArray(allProjects)) {
+          // Hide hidden projects
+          const visibleProjects = allProjects.filter(
+            (p) => p.isVisible !== false,
+          );
+
+          setProjects(visibleProjects);
+        }
       } catch (error) {
         console.error('Error fetching projects:', error);
         toast.error('Failed to fetch projects!');
@@ -114,10 +132,20 @@ const GetInTouch = () => {
       id="get-in-touch"
       className="w-full px-4 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12 font-figtree"
     >
-      <h2 className="mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-light leading-tight text-left">
+      {/* <h2 className="mb-8 text-4xl sm:text-4xl md:text-4xl lg:text-4xl font-light leading-tight text-left">
         <span className="font-normal">Get in </span>
         <span className="font-semibold text-[#2D5C3A] ">Touch</span>
-      </h2>
+      </h2> */}
+      <div className="flex items-center gap-4 mb-8">
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+        <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl whitespace-nowrap">
+          <span className="font-normal">Get in </span>
+          <span className="font-semibold text-[#2D5C3A]">Touch</span>
+        </h2>
+
+        <div className="flex-1 h-[2px] bg-gray-300"></div>
+      </div>
 
       {/* <div className="bg-white rounded-3xl p-8 md:p-10 lg:p-12 w-full shadow-xl"> */}
       <div
