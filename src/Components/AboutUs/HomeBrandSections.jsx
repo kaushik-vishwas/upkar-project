@@ -120,8 +120,8 @@ const HomeBrandSections = () => {
             disabled={currentSection === 0}
             className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all ${
               currentSection === 0
-                ? 'border-gray-300 opacity-40 cursor-not-allowed'
-                : 'border-gray-300 hover:bg-gray-100'
+                ? 'bg-[#2D5C3A] text-white opacity-40 cursor-not-allowed'
+                : 'bg-[#2D5C3A] text-white'
             }`}
           >
             <ChevronLeft size={20} />
@@ -136,8 +136,8 @@ const HomeBrandSections = () => {
             disabled={currentSection === sections.length - 1}
             className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all ${
               currentSection === sections.length - 1
-                ? 'border-gray-300 opacity-40 cursor-not-allowed'
-                : 'border-gray-300 hover:bg-gray-100'
+                ? 'bg-[#2D5C3A] text-white opacity-40 cursor-not-allowed'
+                : 'bg-[#2D5C3A] text-white'
             }`}
           >
             <ChevronRight size={20} />
