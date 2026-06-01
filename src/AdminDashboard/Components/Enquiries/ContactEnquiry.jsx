@@ -197,9 +197,9 @@ const ContactEnquiry = () => {
                 <p>
                   <strong>Status:</strong> {item.projectStatus}
                 </p>
-                <p>
+                {/* <p>
                   <strong>Location:</strong> {item.location}
-                </p>
+                </p> */}
                 <p>
                   <strong>Query:</strong> {item.query}
                 </p>

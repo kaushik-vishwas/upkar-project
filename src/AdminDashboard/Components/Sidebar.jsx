@@ -153,15 +153,10 @@ const Sidebar = () => {
               <NavLink to="/admin/home-projects" className={linkClass}>
                 Projects
               </NavLink>
-              <NavLink to="/admin/certification" className={linkClass}>
-                Core Values
-              </NavLink>
-              <NavLink to="/admin/Brandethos" className={linkClass}>
-                Brand Ethos
-              </NavLink>
-              <NavLink to="/admin/Brandmotive" className={linkClass}>
+
+              {/* <NavLink to="/admin/Brandmotive" className={linkClass}>
                 Brand Motive
-              </NavLink>
+              </NavLink> */}
               <NavLink to="/admin/quotes" className={linkClass}>
                 Quotes
               </NavLink>
@@ -173,6 +168,9 @@ const Sidebar = () => {
               </NavLink>
               <NavLink to="/admin/tree" className={linkClass}>
                 Tree
+              </NavLink>
+              <NavLink to="/admin/testimonials" className={linkClass}>
+                Testimonials
               </NavLink>
             </div>
           )}
@@ -200,6 +198,15 @@ const Sidebar = () => {
               </NavLink>
               <NavLink to="/admin/about-images" className={linkClass}>
                 About Images
+              </NavLink>
+              <NavLink to="/admin/certification" className={linkClass}>
+                Core Values
+              </NavLink>
+              <NavLink to="/admin/Brandethos" className={linkClass}>
+                Brand Ethos
+              </NavLink>
+              <NavLink to="/admin/award-recognition" className={linkClass}>
+                Award Recognition
               </NavLink>
             </div>
           )}

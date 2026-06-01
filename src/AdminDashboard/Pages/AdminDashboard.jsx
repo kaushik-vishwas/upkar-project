@@ -5,13 +5,15 @@ import Navbar from '../Components/Navbar';
 import BannerTable from '../Components/HomePage/Banner';
 import VisionMission from '../Components/HomePage/VisionMission';
 import Projects from '../Components/HomePage/Projects';
-import Certification from '../Components/HomePage/Certification';
-import BrandEthos from '../Components/HomePage/BrandEthos.jsx';
+import Certification from '../Components/AboutPage/CoreValues.jsx';
+import BrandEthos from '../Components/AboutPage/BrandEthos.jsx';
+import AwardRecognition from '../Components/AboutPage/AwardRecognition.jsx';
 import BrandMotive from '../Components/HomePage/BrandMotive.jsx';
 import QAs from '../Components/HomePage/QAs';
 import Awards from '../Components/HomePage/Awards';
 import QuoteCertificate from '../Components/HomePage/Quote';
 import TreeSection from '../Components/HomePage/Tree';
+import Testimonial from '../Components/HomePage/Testimonial.jsx';
 import ProjectMain from '../Components/ProjectPage/ProjectMain';
 import Feature from '../Components/ProjectPage/Feature';
 import Amenity from '../Components/ProjectPage/Amenity';
@@ -53,6 +55,7 @@ import EventEnquiryList from '../Components/Enquiries/EventEnquiryList';
 import ContactEnquiryList from '../Components/Enquiries/ContactEnquiry.jsx';
 import CareerRoles from '../Components/JobRoles/JobRoles';
 import Settings from '../Components/Settings/Settings';
+import AwardRecognitionAdmin from '../Components/AboutPage/AwardRecognition.jsx';
 
 const AdminDashboard = () => {
   return (
@@ -71,11 +74,13 @@ const AdminDashboard = () => {
             <Route path="home-projects" element={<Projects />} />
             <Route path="certification" element={<Certification />} />
             <Route path="Brandethos" element={<BrandEthos />} />
+            <Route path="award-recognition" element={<AwardRecognition />} />
             <Route path="Brandmotive" element={<BrandMotive />} />
             <Route path="qna" element={<QAs />} />
             <Route path="awards" element={<Awards />} />
             <Route path="quotes" element={<QuoteCertificate />} />
             <Route path="tree" element={<TreeSection />} />
+            <Route path="testimonials" element={<Testimonial />} />
             <Route path="project-main" element={<ProjectMain />} />
             <Route path="feature" element={<Feature />} />
             <Route path="amenity" element={<Amenity />} />
