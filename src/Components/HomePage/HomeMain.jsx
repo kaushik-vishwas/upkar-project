@@ -97,7 +97,7 @@ const HomeMain = () => {
   return (
     <div className="w-full">
       <div className="relative w-full">
-        <div className="relative w-full aspect-[16/9] overflow-hidden">
+        <div className="relative w-full aspect-[16/8] lg:aspect-[21/8] overflow-hidden">
           {banner?.images?.map((img, index) => (
             <img
               key={index}
@@ -139,39 +139,6 @@ const HomeMain = () => {
             style={{ zIndex: 3 }}
           />
 
-          {/* Text content */}
-          {/* <div
-            className="absolute inset-0 flex flex-col justify-end px-4 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-16 md:pb-24"
-            style={{ zIndex: 4 }}
-          >
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[64px] mb-4 sm:mb-6 font-figtree">
-              <span className="font-semibold">{animatedTitle1}</span>
-              <br />
-              <span className="font-bold">{animatedTitle2}</span>
-            </h1>
-
-            <p
-              className={`block text-white max-w-[90%] sm:max-w-lg md:max-w-xl text-base sm:text-lg md:text-2xl lg:text-2xl mb-4 sm:mb-6
-                font-figtree font-medium transition-opacity duration-1000 ease-in-out
-                ${showSubtitle ? 'opacity-100' : 'opacity-0'}`}
-            >
-              {animatedSubtitle}
-            </p>
-
-            <div className="hidden sm:flex items-start">
-              <button
-                onClick={() => navigate('/contact')}
-                className="inline-flex items-center bg-[#ffffff] rounded-full shadow-md hover:scale-105 transition-transform duration-300"
-              >
-                <span className="px-6 py-3 text-black text-sm sm:text-base font-medium">
-                  Connect us
-                </span>
-                <span className="relative -mr-1 w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center border-2 border-[#ffffff]">
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#ffffff]" />
-                </span>
-              </button>
-            </div>
-          </div> */}
           {/* Text content */}
           <div
             className="absolute inset-0 flex flex-col justify-end sm:justify-start px-4 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-0 sm:pt-24 md:pt-32 lg:pt-40"

@@ -3,7 +3,6 @@ import QnsAns from '../Components/Common/QnsAns';
 import Quote from '../Components/AboutUs/Quote';
 import Team from '../Components/AboutUs/Team';
 import AboutCertification from '../Components/AboutUs/HomeBrandSections';
-import Gallery from '../Components/AboutUs/Gallery';
 import Navbar from '../Components/CompletedPrjcts/CmpltNavbar';
 
 const AboutUs = () => {
@@ -12,11 +11,10 @@ const AboutUs = () => {
       <Navbar />
       <div className="pt-24">
         <MainSection />
-        <QnsAns />
         <Quote />
         <Team />
         <AboutCertification />
-        <Gallery />
+        <QnsAns />
       </div>
     </>
   );

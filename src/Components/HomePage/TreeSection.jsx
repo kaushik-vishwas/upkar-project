@@ -44,11 +44,11 @@ export default function Section() {
         transition: 'all 1s cubic-bezier(0.22, 1, 0.36, 1)',
       }}
     >
+      {/* Heading Section */}
       <div className="text-center flex flex-col gap-4 sm:gap-4 md:gap-6 lg:gap-8 mt-4 items-center">
         <h2
           className="text-2xl sm:text-4xl md:text-5xl font-figtree lg:text-[64px] font-medium"
           style={{
-            // fontFamily: "'Noto Serif JP', serif",
             opacity: animate ? 1 : 0,
             transform: animate ? 'translateY(0)' : 'translateY(30px)',
             transition: 'all 1.2s ease',
@@ -58,9 +58,8 @@ export default function Section() {
         </h2>
 
         <h2
-          className="text-2xl sm:text-4xl md:text-5xl font-figtree lg:text-[64px] text-[#2D5C3A]  font-semibold"
+          className="text-2xl sm:text-4xl md:text-5xl font-figtree lg:text-[64px] text-[#2D5C3A] font-semibold"
           style={{
-            // fontFamily: "'Noto Serif JP', serif",
             opacity: animate ? 1 : 0,
             transform: animate ? 'translateY(0)' : 'translateY(30px)',
             transition: 'all 1.4s ease',
@@ -81,52 +80,60 @@ export default function Section() {
           </span>{' '}
           {heading2Second}
         </h2>
-
-        <p
-          className="text-sm sm:text-lg md:text-xl lg:text-xl text-[#000000] font-medium font-[Figtree] 
-             max-w-[90%] sm:max-w-[75%] md:max-w-[60%] lg:max-w-[55%] mt-2"
-          style={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 1.6s ease',
-          }}
-        >
-          {/* <span className="font-bold">Upkar Developers</span>{' '} */}
-          {section.description}
-        </p>
       </div>
 
-      {/* Image Section */}
+      {/* Description + Image Section */}
       <div
-        className="relative w-full max-w-lg sm:max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl mt-4 sm:mt-6"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2"
         style={{
           opacity: animate ? 1 : 0,
-          transform: animate ? 'scale(1)' : 'scale(0.95)',
-          transition: 'all 1.8s ease',
+          transform: animate ? 'translateY(0)' : 'translateY(20px)',
+          transition: 'all 1.6s ease',
         }}
       >
-        <img
-          src={section.image || UbkarHabit}
-          alt="Upkar Habitat"
-          className="w-full h-auto object-cover"
-          style={{
-            transition: 'transform 0.8s ease',
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.transform = 'scale(1.05)')
-          }
-          onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-        />
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+          {/* Description */}
+          <div className="w-full lg:w-1/2">
+            <p className="text-base sm:text-lg md:text-xl lg:text-xl text-[#000000] font-medium font-figtree leading-relaxed text-justify">
+              {section.description}
+            </p>
+          </div>
+
+          {/* Image */}
+          <div
+            className="w-full lg:w-1/2 h-[250px] sm:h-[300px] lg:h-[250px] rounded-2xl overflow-hidden shadow-xl"
+            style={{
+              opacity: animate ? 1 : 0,
+              transform: animate ? 'scale(1)' : 'scale(0.95)',
+              transition: 'all 1.8s ease',
+            }}
+          >
+            <img
+              src={section.image || UbkarHabit}
+              alt="Upkar Habitat"
+              className="w-full h-full object-cover"
+              style={{
+                transition: 'transform 0.8s ease',
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = 'scale(1.05)')
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = 'scale(1)')
+              }
+            />
+          </div>
+        </div>
       </div>
 
       <style>
         {`
-          @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-          }
-        `}
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+          100% { transform: translateY(0px); }
+        }
+      `}
       </style>
     </div>
   );

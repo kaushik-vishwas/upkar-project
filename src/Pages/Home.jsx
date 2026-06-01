@@ -1,14 +1,10 @@
 import HomeMain from '../Components/HomePage/HomeMain';
 import VisionMission from '../Components/HomePage/VisionMission';
 import Projects from '../Components/HomePage/Projects';
-import CoreValues from '../Components/AboutUs/HomeBrandSections';
-import QnsAns from '../Components/Common/QnsAns';
-import Awards from '../Components/HomePage/Awards';
-import ContactUs from '../Components/Common/ContactUs';
 import Navbar from '../Components/CompletedPrjcts/CmpltNavbar';
-import Quote from '../Components/HomePage/Quote';
 import TreeSection from '../Components/HomePage/TreeSection';
 import Map from '../Components/HomePage/Map';
+import Testimonials from '../Components/HomePage/Testimonials';
 
 const Home = () => {
   return (
@@ -16,16 +12,13 @@ const Home = () => {
       <Navbar />
       <div className="pt-24">
         <HomeMain />
-        <div className="pt-16 sm:pt-24"></div>
+        <div className="pt-12 lg:pt-12"></div>
         <TreeSection />
         <VisionMission />
         <Map />
+        <div className="pt-12 lg:pt-12"></div>
         <Projects />
-        <CoreValues />
-        <Quote />
-        <QnsAns />
-        <Awards />
-        <ContactUs />
+        <Testimonials />
       </div>
     </>
   );
