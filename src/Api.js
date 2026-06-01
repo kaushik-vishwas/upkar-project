@@ -1873,3 +1873,113 @@ export const deleteContactEnquiry = async (id, token) => {
   );
   return res.data;
 };
+
+// Testimonials
+
+export const getTestimonialsAPI = async () => {
+  try {
+    const { data } = await axios.get(
+      `${API_URL}/homepage/get-all-testimonials`,
+    );
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createTestimonialAPI = async (formData, token) => {
+  try {
+    const { data } = await axios.post(
+      `${API_URL}/homepage/create-testimonial`,
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updateTestimonialAPI = async (id, formData, token) => {
+  try {
+    const { data } = await axios.put(
+      `${API_URL}/homepage/update-testimonial/${id}`,
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteTestimonialAPI = async (id, token) => {
+  try {
+    const { data } = await axios.delete(
+      `${API_URL}/homepage  /delete-testimonial/${id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getAwardRecognition = async (token) => {
+  const res = await axios.get(`${API_URL}/homepage/get-all-award-recognition`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  return res.data;
+};
+
+export const createAwardRecognition = async (formData, token) => {
+  const res = await axios.post(
+    `${API_URL}/homepage/create-award-recognition`,
+    formData,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'multipart/form-data',
+      },
+    },
+  );
+  return res.data;
+};
+
+export const updateAwardRecognition = async (id, formData, token) => {
+  const res = await axios.put(
+    `${API_URL}/homepage/update-award-recognition/${id}`,
+    formData,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'multipart/form-data',
+      },
+    },
+  );
+  return res.data;
+};
+
+export const deleteAwardRecognition = async (id, token) => {
+  const res = await axios.delete(
+    `${API_URL}/homepage/delete-award-recognition/${id}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    },
+  );
+  return res.data;
+};
