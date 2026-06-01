@@ -217,7 +217,7 @@ const OngoingProjectsList = () => {
                 currentPage > 0 && setCurrentPage((prev) => prev - 1)
               }
               disabled={currentPage === 0}
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 disabled:opacity-40"
+              className="p-2 rounded-full bg-[#2D5C3A] text-white disabled:opacity-40"
             >
               <ChevronLeft size={20} />
             </button>
@@ -232,7 +232,7 @@ const OngoingProjectsList = () => {
                 setCurrentPage((prev) => prev + 1)
               }
               disabled={currentPage === totalPages - 1}
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 disabled:opacity-40"
+              className="p-2 rounded-full bbg-[#2D5C3A] text-white disabled:opacity-40"
             >
               <ChevronRight size={20} />
             </button>

@@ -116,8 +116,8 @@ const Projects = () => {
           className="mb-4 lg:mb-12 text-3xl sm:text-3xl md:text-4xl font-figtree lg:text-4xl font-light leading-tight"
           // style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
-          <span style={{ fontWeight: 700 }}>Our </span>
-          <span style={{ fontWeight: 500 }}>Projects</span>
+          <span className="font-normal">Our </span>
+          <span className="font-semibold">Projects</span>
         </h2>
         <div className="flex justify-center items-center h-64">
           <p className="text-xl text-gray-600">No projects found</p>

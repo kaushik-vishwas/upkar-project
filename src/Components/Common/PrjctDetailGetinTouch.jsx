@@ -72,8 +72,8 @@ const PrjctDetailGetinTouch = () => {
   return (
     <div className="w-full px-4 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12 font-figtree">
       <h2 className="mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-light leading-tight text-left">
-        <span style={{ fontWeight: 500 }}>Get in </span>
-        <span style={{ fontWeight: 700 }}>Touch</span>
+        <span className="font-normal">Get in </span>
+        <span className="font-semibold">Touch</span>
       </h2>
 
       <div className="bg-white rounded-3xl p-8 md:p-10 lg:p-12 w-full shadow-xl">

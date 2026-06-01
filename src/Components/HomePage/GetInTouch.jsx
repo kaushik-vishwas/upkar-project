@@ -70,7 +70,7 @@ const GetInTouch = () => {
     } catch (error) {
       console.error(error);
       toast.error(
-        error?.response?.data?.message || 'Something went wrong. Try again.'
+        error?.response?.data?.message || 'Something went wrong. Try again.',
       );
     }
   };
@@ -78,8 +78,8 @@ const GetInTouch = () => {
   return (
     <div className="w-full px-4 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12 mb-0 lg:mb-2 font-sans">
       <h2 className="mb-4 lg:mb-12 text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-light leading-tight">
-        <span style={{ fontWeight: 500 }}>Get in </span>
-        <span style={{ fontWeight: 700 }}>Touch</span>
+        <span className="font-normal">Get in </span>
+        <span className="font-semibold">Touch</span>
       </h2>
 
       <div className="relative rounded-3xl overflow-hidden shadow-2xl">
