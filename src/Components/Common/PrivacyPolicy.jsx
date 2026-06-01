@@ -6,9 +6,19 @@ const PrivacyPolicy = () => {
     <>
       <Navbar />
       <div className="pt-28 w-full font-figtree px-6 sm:px-10 lg:px-24 py-12 bg-white text-gray-800">
-        <h1 className="text-3xl sm:text-4xl font-semibold font-figtree mb-8 text-[#2D5C3A]">
+        {/* <h2 className="text-3xl sm:text-4xl font-semibold font-figtree mb-8 text-[#2D5C3A]">
           Privacy Policy
-        </h1>
+        </h2> */}
+        <div className="flex items-center gap-4 mb-8 mt-14">
+          <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+          <h2 className="text-3xl sm:text-4xl font-figtree text-center whitespace-nowrap">
+            <span className="font-normal">Privacy </span>
+            <span className="font-semibold text-[#2D5C3A]">Policy</span>
+          </h2>
+
+          <div className="flex-1 h-[2px] bg-gray-300"></div>
+        </div>
 
         <div className="space-y-8 text-base leading-relaxed">
           <div>

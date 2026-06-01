@@ -109,10 +109,20 @@ const CityProjects = () => {
       <Navbar />
       <div ref={topRef} className="pt-28 w-full py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-figtree mb-10 text-center capitalize">
+          {/* <h2 className="text-3xl font-figtree mb-10 text-center capitalize">
             <span className="">{city}</span>{' '}
             <span className="font-semibold text-[#2D5C3A]">Projects</span>
-          </h2>
+          </h2> */}
+          <div className="flex items-center gap-4 mb-10 mt-14">
+            <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+            <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-figtree text-center whitespace-nowrap">
+              <span className="font-normal">{city} </span>
+              <span className="font-semibold text-[#2D5C3A]">Projects</span>
+            </h2>
+
+            <div className="flex-1 h-[2px] bg-gray-300"></div>
+          </div>
 
           {currentProjects.length === 0 ? (
             <p className="text-center text-gray-500 font-figtree">
