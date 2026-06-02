@@ -111,16 +111,35 @@ const Projects = () => {
 
   if (projects.length === 0) {
     return (
+      // <div className="w-full bg-white px-4 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12">
+      //   <h2
+      //     className="mb-4 lg:mb-12 text-3xl sm:text-3xl md:text-4xl font-figtree lg:text-4xl font-light leading-tight"
+
+      //   >
+      //     <span className="font-normal">Our </span>
+      //     <span className="font-semibold">Projects</span>
+      //   </h2>
+      //   <div className="flex justify-center items-center h-64">
+      //     <p className="text-xl text-gray-600">No projects found</p>
+      //   </div>
+      // </div>
       <div className="w-full bg-white px-4 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12">
-        <h2
-          className="mb-4 lg:mb-12 text-3xl sm:text-3xl md:text-4xl font-figtree lg:text-4xl font-light leading-tight"
-          // style={{ fontFamily: "'Noto Serif JP', serif" }}
-        >
-          <span className="font-normal">Our </span>
-          <span className="font-semibold">Projects</span>
-        </h2>
+        {/* Heading (same style as Testimonials) */}
+        <div className="flex items-center gap-4 mb-8 lg:mb-12">
+          <div className="flex-1 h-[2px] bg-gray-300"></div>
+
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-figtree text-center whitespace-nowrap">
+            <span className="font-semibold text-[#2D5C3A]">Our Projects</span>
+          </h2>
+
+          <div className="flex-1 h-[2px] bg-gray-300"></div>
+        </div>
+
+        {/* Empty state */}
         <div className="flex justify-center items-center h-64">
-          <p className="text-xl text-gray-600">No projects found</p>
+          <p className="text-lg sm:text-xl text-gray-600 font-figtree">
+            No projects found
+          </p>
         </div>
       </div>
     );

@@ -130,7 +130,7 @@ const GetInTouch = () => {
   return (
     <div
       id="get-in-touch"
-      className="w-full px-4 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12 font-figtree"
+      className="w-full px-4 lg:px-10 py-0 sm:py-1 md:py-2 lg:py-3 font-figtree"
     >
       {/* <h2 className="mb-8 text-4xl sm:text-4xl md:text-4xl lg:text-4xl font-light leading-tight text-left">
         <span className="font-normal">Get in </span>

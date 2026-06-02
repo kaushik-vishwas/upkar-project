@@ -12,11 +12,11 @@ const Home = () => {
       <Navbar />
       <div className="pt-24">
         <HomeMain />
-        <div className="pt-12 lg:pt-12"></div>
+        <div className="pt-6 lg:pt-12"></div>
         <TreeSection />
         <VisionMission />
         <Map />
-        <div className="pt-12 lg:pt-12"></div>
+        <div className="pt-6 lg:pt-12"></div>
         <Projects />
         <Testimonials />
       </div>

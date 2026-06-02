@@ -144,7 +144,7 @@ const HomeMain = () => {
             className="absolute inset-0 flex flex-col justify-end sm:justify-start px-4 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-0 sm:pt-24 md:pt-32 lg:pt-40"
             style={{ zIndex: 4 }}
           >
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[64px] mb-4 sm:mb-6 font-figtree">
+            <h1 className="text-white text-3xl sm:text-3xl md:text-5xl lg:text-[64px] mb-0 sm:mb-6 font-figtree">
               <span className="font-semibold">{animatedTitle1}</span>
               <br />
               <span className="font-bold">{animatedTitle2}</span>

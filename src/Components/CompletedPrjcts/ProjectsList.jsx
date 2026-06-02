@@ -101,7 +101,7 @@ const CompletedProjectsList = () => {
   };
 
   return (
-    <div ref={topRef} className="w-full py-16 px-4">
+    <div ref={topRef} className="w-full py-6 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -143,7 +143,7 @@ const CompletedProjectsList = () => {
           </div>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-6">
           {currentProjects.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-gray-400">
               <p className="text-[14px] font-medium text-gray-500">

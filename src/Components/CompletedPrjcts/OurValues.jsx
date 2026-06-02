@@ -70,13 +70,16 @@ const OurValues = () => {
   }, [isVisible, values]);
 
   return (
-    <div ref={sectionRef} className="w-full bg-white py-16 px-4 font-figtree">
+    <div
+      ref={sectionRef}
+      className="w-full bg-white pt-0 pb-6 px-4 font-figtree"
+    >
       <div className="max-w-6xl mx-auto">
         {/* <h2 className="text-4xl md:text-5xl mb-16 text-black">
           <span className="font-normal">Our </span>
           <span className="font-semibold text-[#2D5C3A]">Values</span>
         </h2> */}
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-6 md:mb-6 lg:mb-6">
           <div className="flex-1 h-[2px] bg-gray-300"></div>
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-figtree text-center whitespace-nowrap">
             <span className="font-normal">Our</span>{' '}
@@ -85,7 +88,7 @@ const OurValues = () => {
           <div className="flex-1 h-[2px] bg-gray-300"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-4">
           {values.map((value) => (
             <div
               key={value._id}

@@ -8,7 +8,7 @@ const CompletedPrjcts = () => {
   return (
     <div>
       <CmpltNavbar />
-      <div className="pt-24">
+      <div className="pt-16 space-y-2">
         <CompletedMain />
         <ProjectsList />
         <OurValues />
