@@ -138,7 +138,7 @@ const Events = () => {
   };
 
   return (
-    <div className="w-full bg-white py-8 md:py-12 lg:py-16 px-4 md:px-6">
+    <div className="w-full bg-white py-6 md:py-6 lg:py-6 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
         {/* <h2 className="text-2xl md:text-4xl lg:text-5xl font-figtree mb-8 md:mb-12">
           <span className="font-semibold">Events </span>

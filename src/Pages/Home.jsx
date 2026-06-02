@@ -16,7 +16,7 @@ const Home = () => {
         <TreeSection />
         <VisionMission />
         <Map />
-        <div className="pt-6 lg:pt-12"></div>
+        <div className="pt-6 lg:pt-6"></div>
         <Projects />
         <Testimonials />
       </div>

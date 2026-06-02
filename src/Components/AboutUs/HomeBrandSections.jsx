@@ -106,7 +106,7 @@ const HomeBrandSections = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full">
+    <div ref={sectionRef} className="w-full mt-0">
       {/* Section Content */}
       <div className="transition-all duration-500">
         {sections[currentSection]}
@@ -114,7 +114,8 @@ const HomeBrandSections = () => {
 
       {/* Bottom Center Navigation */}
       {sections.length > 1 && (
-        <div className="flex justify-center items-center gap-3 mt-8 pb-4">
+        // <div className="flex justify-center items-center gap-3  pb-4">
+        <div className="flex justify-center items-center gap-2 mt-2 pb-2">
           <button
             onClick={prevSection}
             disabled={currentSection === 0}

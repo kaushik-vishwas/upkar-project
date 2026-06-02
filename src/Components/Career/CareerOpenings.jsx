@@ -34,7 +34,7 @@ const CareerOpenings = () => {
   return (
     <div
       id="job-openings"
-      className="px-4 lg:px-10 py-2 sm:py-4 md:py-6 lg:py-8 font-[Figtree] bg-white"
+      className="px-4 lg:px-10 py-5 sm:py-5 md:py-5 lg:py-5 font-[Figtree] bg-white"
     >
       {/* <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold text-[#2D5C3A] mb-10">
         Openings

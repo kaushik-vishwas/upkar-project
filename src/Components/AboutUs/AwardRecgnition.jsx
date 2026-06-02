@@ -25,7 +25,7 @@ const AwardRecognitionSection = () => {
   }, []);
 
   return (
-    <div className="w-full bg-white py-16 px-6 lg:px-20">
+    <div className="w-full bg-white py-8 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto font-figtree text-center">
         {/* HEADER */}
         <div

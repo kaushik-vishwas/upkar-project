@@ -46,7 +46,7 @@ const Team = () => {
 
   return (
     <div
-      className="w-full bg-white px-4 lg:px-10 py-8 font-[Figtree]"
+      className="w-full bg-white px-4 lg:px-10  font-[Figtree]"
       style={{
         opacity: animate ? 1 : 0,
         transform: animate ? 'translateY(0)' : 'translateY(40px)',
