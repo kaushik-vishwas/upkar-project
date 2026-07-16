@@ -1,10 +1,10 @@
 import axios from 'axios';
 const API_URL =
   // import.meta.env.VITE_API_URL || 'https://upkar-backend.onrender.com/api';
-  import.meta.env.VITE_API_URL || 'https://backend.upkardevelopers.co.in';
+  import.meta.env.VITE_API_URL || 'https://backend.upkardevelopers.co.in/api';
 // import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
-//Admin Auth
+//Admin Authenticaion
 export const adminLoginApi = async (data) => {
   const res = await axios.post(`${API_URL}/admin/login`, data);
   return res.data;
