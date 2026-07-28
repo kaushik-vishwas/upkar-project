@@ -84,7 +84,7 @@ const Map = () => {
   return (
     <section className="bg-gray-100 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.45fr] gap-10 lg:gap-16 items-start">
           <div className="text-center lg:text-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-figtree font-semibold text-black mb-6 md:mb-8">
               <span className="text-[#2D5C3A] font-semibold">
