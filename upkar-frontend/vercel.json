@@ -1,11 +1,7 @@
-
 {
   "rewrites": [
+    { "source": "/landing-pages", "destination": "/landing-pages/index.html" },
+    { "source": "/landing-pages/", "destination": "/landing-pages/index.html" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
-
-
-
-
-

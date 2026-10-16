@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<base href="/landing-pages/">
+<script>
+// Keep "#section" links on this page when it is opened as /landing-pages (no trailing slash).
+if (location.pathname === '/landing-pages') history.replaceState(null, '', '/landing-pages/' + location.search + location.hash);
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Upkar Developers — DTCP &amp; RERA Plots in Hosur &amp; Kengeri</title>
 <meta name="description" content="Gardenia near TVS Attibele, Royal Valley on NH 48 Hosur, Galaxy Phase 2 Kengeri. Plots from ₹3,499/sq.ft. Get pricing &amp; layout.">

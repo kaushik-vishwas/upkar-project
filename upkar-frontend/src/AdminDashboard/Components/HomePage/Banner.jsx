@@ -81,29 +81,10 @@ const Banner = () => {
         </button>
       </div>
 
-      <div className="mb-4 rounded border border-blue-200 bg-blue-50 p-4 text-sm text-gray-700">
-        <p className="font-semibold text-blue-800 mb-2">
-          Best fit for home page banner images
-        </p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>
-            Recommended size: <strong>2520 × 960 px</strong> (21:8 landscape).
-            Minimum 1920 × 732 px.
-          </li>
-          <li>
-            On mobile the left and right edges are cropped (2:1). Keep buildings,
-            people and logos in the <strong>centre 1920 px</strong>.
-          </li>
-          <li>
-            The title and button sit on the left side and the bottom is darkened,
-            so avoid important details in the left third and bottom area.
-          </li>
-          <li>
-            Format: <strong>JPG or WebP</strong>, ideally under 500 KB per image
-            for fast loading.
-          </li>
-        </ul>
-      </div>
+      <p className="mb-4 text-sm text-gray-600">
+        Best fit: <strong>2520 × 960 px</strong> (JPG/WebP, under 500 KB).
+        Keep key content centred.
+      </p>
 
       <div className="overflow-x-auto w-full bg-white rounded shadow">
         <table className="min-w-full divide-y divide-gray-200">

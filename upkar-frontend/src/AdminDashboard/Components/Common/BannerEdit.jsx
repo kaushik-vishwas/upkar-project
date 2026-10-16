@@ -265,8 +265,7 @@ const BannerEdit = ({ isOpen, onClose, banner, onUpdate }) => {
           className="border p-2 w-full mb-1 rounded"
         />
         <p className="text-xs text-blue-700 mb-1">
-          Best fit: 2520 × 960 px (21:8), JPG/WebP under 500 KB. Keep key
-          content in the centre — edges are cropped on mobile.
+          Best fit: 2520 × 960 px (JPG/WebP, under 500 KB).
         </p>
         <p className="text-xs text-gray-400 mb-3">
           {existingImages.length + newImages.length}/10 images selected
