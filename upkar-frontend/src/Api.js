@@ -1,7 +1,7 @@
 import axios from 'axios';
 // const API_URL = import.meta.env.VITE_API_URL || 'https://upkar-backend.onrender.com/api';
-const API_URL = import.meta.env.VITE_API_URL || 'https://backend.upkardevelopers.co.in/api';
-// const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// const API_URL = import.meta.env.VITE_API_URL || 'https://backend.upkardevelopers.co.in/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 //Admin Authenticaion
 export const adminLoginApi = async (data) => {
