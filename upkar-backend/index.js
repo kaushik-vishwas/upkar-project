@@ -1,12 +1,12 @@
+
 import dns from 'node:dns';
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-// The default resolver fails Atlas SRV lookups (queryTxt ESERVFAIL) on this network.
+// Use public DNS resolvers for MongoDB Atlas SRV lookups.
 dns.setServers(['8.8.8.8', '1.1.1.1']);
-// import { startRenderSelfPing } from './utils/renderSelfPing.js';
 
 dotenv.config();
 
@@ -30,19 +30,22 @@ import contactRoute from './routes/sendContactEmail.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.get('/health', (req, res) => {
-  res.json({ message: 'Server is alive' });
-});
-//test333
+// Allowed frontend origins.
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://upkar-frontend.vercel.app',
+  'https://upkar-group.vercel.app',
+  'https://upkar.vercel.app',
+  'https://upkardevelopers.com',
+  'https://www.upkardevelopers.com',
+  'https://upkardevelopers.co.in',
+  'https://www.upkardevelopers.co.in',
+];
 
+// CORS middleware must run before API routes.
 app.use(
   cors({
-    origin: [
-      'http://localhost:5173',
-      'https://upkar-frontend.vercel.app',
-      'https://upkar-group.vercel.app',
-      'https://upkar.vercel.app',
-    ],
+    origin: allowedOrigins,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -51,6 +54,12 @@ app.use(
 
 app.use(express.json());
 
+// Health check
+app.get('/health', (req, res) => {
+  res.json({ message: 'Server is alive' });
+});
+
+// API routes
 app.use('/api/admin', adminRoutes);
 app.use('/api/homepage', homepageRoutes);
 app.use('/api/projectpage', projectpageRoutes);
@@ -67,23 +76,25 @@ app.use('/api/categories', categoriesRoutes);
 app.use('/api', emailRoute);
 app.use('/api/contact', contactRoute);
 
+// MongoDB connection and initial admin setup
 mongoose
   .connect(process.env.MONGO_URI, {
     serverSelectionTimeoutMS: 30000,
   })
   .then(async () => {
     console.log('MongoDB Connected');
+
     try {
       await createAdminOnce();
     } catch (err) {
       console.error('Admin setup error:', err.message);
     }
   })
-  .catch((err) => console.error('MongoDB Connection Error:', err.message));
+  .catch((err) => {
+    console.error('MongoDB Connection Error:', err.message);
+  });
 
-// start cron ping
-// startRenderSelfPing();
-
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
