@@ -204,6 +204,10 @@ const BannerAdd = ({ isOpen, onClose, onBannerAdded }) => {
             className="mb-3"
             onChange={handleImageChange}
           />
+          <p className="text-xs text-blue-700 mb-1">
+            Best fit: 2520 × 960 px (21:8), JPG/WebP under 500 KB. Keep key
+            content in the centre — edges are cropped on mobile.
+          </p>
           <p className="text-xs text-gray-400 mb-2">
             {images.length}/10 images selected
           </p>

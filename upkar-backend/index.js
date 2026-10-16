@@ -40,6 +40,7 @@ const allowedOrigins = [
   'https://www.upkardevelopers.com',
   'https://upkardevelopers.co.in',
   'https://www.upkardevelopers.co.in',
+  'https://upkardevelopers.com/admin-login'
 ];
 
 // CORS middleware must run before API routes.

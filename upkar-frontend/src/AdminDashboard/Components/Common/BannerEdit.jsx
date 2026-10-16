@@ -262,8 +262,12 @@ const BannerEdit = ({ isOpen, onClose, banner, onUpdate }) => {
           accept="image/*"
           multiple
           onChange={handleImageChange}
-          className="border p-2 w-full mb-3 rounded"
+          className="border p-2 w-full mb-1 rounded"
         />
+        <p className="text-xs text-blue-700 mb-1">
+          Best fit: 2520 × 960 px (21:8), JPG/WebP under 500 KB. Keep key
+          content in the centre — edges are cropped on mobile.
+        </p>
         <p className="text-xs text-gray-400 mb-3">
           {existingImages.length + newImages.length}/10 images selected
         </p>
