@@ -3,7 +3,8 @@ import axios from 'axios';
 const API_URL = import.meta.env.VITE_API_URL || 'https://backend.upkardevelopers.co.in/api';
 // const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
-//Admin Authenticaion
+
+//Admin  Authenticaion
 export const adminLoginApi = async (data) => {
   const res = await axios.post(`${API_URL}/admin/login`, data);
   return res.data;
